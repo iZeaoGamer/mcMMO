@@ -9,7 +9,7 @@ use cosmicpe\mcmmo\McMMO;
 use pocketmine\event\EventPriority;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerQuitEvent;
-use pocketmine\player\Player;
+use pocketmine\Player;
 use pocketmine\utils\UUID;
 
 final class PlayerManager{
