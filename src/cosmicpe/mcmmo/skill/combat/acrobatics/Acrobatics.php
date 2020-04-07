@@ -8,7 +8,7 @@ use cosmicpe\mcmmo\skill\combat\CombatSkill;
 use cosmicpe\mcmmo\skill\combat\CombatSkillIds;
 use cosmicpe\mcmmo\skill\Listenable;
 use pocketmine\item\enchantment\Enchantment;
-use pocketmine\player\Player;
+use pocketmine\Player;
 
 class Acrobatics implements CombatSkill, Listenable{
 
