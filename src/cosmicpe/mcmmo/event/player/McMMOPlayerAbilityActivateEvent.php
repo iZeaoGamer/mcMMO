@@ -10,10 +10,8 @@ use cosmicpe\mcmmo\skill\subskill\SubSkill;
 use cosmicpe\mcmmo\skill\subskill\SubSkillManager;
 use InvalidArgumentException;
 use pocketmine\event\Cancellable;
-use pocketmine\event\CancellableTrait;
 
 class McMMOPlayerAbilityActivateEvent extends McMMOPlayerEvent implements Cancellable{
-	use CancellableTrait;
 
 	/** @var Ability */
 	protected $ability;
