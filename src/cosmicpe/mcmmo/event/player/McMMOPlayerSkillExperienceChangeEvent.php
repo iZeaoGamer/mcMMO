@@ -8,10 +8,8 @@ use cosmicpe\mcmmo\player\McMMOPlayer;
 use cosmicpe\mcmmo\skill\experience\SkillExperienceManager;
 use cosmicpe\mcmmo\skill\Skill;
 use pocketmine\event\Cancellable;
-use pocketmine\event\CancellableTrait;
 
 class McMMOPlayerSkillExperienceChangeEvent extends McMMOPlayerSkillEvent implements Cancellable{
-	use CancellableTrait;
 
 	/** @var int */
 	protected $old_experience;
