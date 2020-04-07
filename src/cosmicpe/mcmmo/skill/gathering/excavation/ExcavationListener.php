@@ -14,7 +14,7 @@ use cosmicpe\mcmmo\skill\subskill\SubSkillManager;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\EventPriority;
 use pocketmine\event\Listener;
-use pocketmine\player\Player;
+use pocketmine\Player;
 
 class ExcavationListener implements Listener{
 
