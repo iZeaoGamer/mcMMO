@@ -6,7 +6,7 @@ namespace cosmicpe\mcmmo\skill\ability;
 
 use cosmicpe\mcmmo\player\McMMOPlayer;
 use pocketmine\item\Item;
-use pocketmine\player\Player;
+use pocketmine\Player;
 
 interface Ability{
 
