@@ -10,7 +10,7 @@ use cosmicpe\mcmmo\skill\SkillInstance;
 use cosmicpe\mcmmo\skill\subskill\SubSkill;
 use cosmicpe\mcmmo\skill\subskill\SubSkillInstance;
 use cosmicpe\mcmmo\sound\McMMOLevelUpSound;
-use pocketmine\player\Player;
+use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat;
 use pocketmine\utils\UUID;
@@ -96,7 +96,7 @@ final class McMMOPlayer{
 				$player = $this->getPlayer();
 				if($player !== null){
 					$player->sendMessage(TextFormat::YELLOW . $skill->getName() . " increased by " . ($new_level - $old_level) . ". Total (" . $new_level . ")");
-					$player->getWorld()->addSound($player->getEyePos(), new McMMOLevelUpSound(), [$player]);
+					$player->getLevel()->addSound($player->getEyePos(), new McMMOLevelUpSound(), [$player]);
 				}
 			}
 			return true;
