@@ -24,22 +24,26 @@ final class PlayerManager{
 		$plugin_manager = $plugin->getServer()->getPluginManager();
 
 		/** @noinspection PhpUnhandledExceptionInspection */
-		$plugin_manager->registerEvent(PlayerJoinEvent::class, function(PlayerJoinEvent $event) : void{
-			$this->load($event->getPlayer()->getUniqueId());
-		}, EventPriority::MONITOR, $plugin);
+		$plugin_manager->registerEvents($this, $plugin);
+			
+		
 
 		/** @noinspection PhpUnhandledExceptionInspection */
-		$plugin_manager->registerEvent(PlayerQuitEvent::class, function(PlayerQuitEvent $event) : void{
-			$player = $this->get($event->getPlayer());
-			if($player !== null){
-				$this->unload($player);
-			}
-		}, EventPriority::MONITOR, $plugin);
+	
 		$this->database = $database;
 
 		PlayerAbilityHandler::init($plugin);
 	}
+public function onJoin(PlayerJoinEvent $event){
+$this->load($event->getPlayer()->getUniqueId());
+}
+public function onQuit(PlayerQuitEvent $event){
 
+$player = $this->get($event->getPlayer());
+			if($player !== null){
+				$this->unload($player);
+			}
+}
 	public function load(UUID $uuid) : void{
 		$this->database->load($uuid, function(McMMOPlayer $player) : void{
 			$this->players[$player->getUniqueId()->toBinary()] = $player;
