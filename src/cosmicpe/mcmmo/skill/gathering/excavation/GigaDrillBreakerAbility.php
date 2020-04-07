@@ -15,7 +15,7 @@ use cosmicpe\mcmmo\skill\subskill\SubSkillManager;
 use pocketmine\block\BlockToolType;
 use pocketmine\item\Item;
 use pocketmine\item\Shovel;
-use pocketmine\player\Player;
+use pocketmine\Player;
 
 final class GigaDrillBreakerAbility extends BuffableAbility implements AbilityRemoveHandler{
 
