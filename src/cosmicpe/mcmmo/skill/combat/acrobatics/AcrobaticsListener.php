@@ -14,7 +14,7 @@ use cosmicpe\mcmmo\skill\subskill\SubSkillManager;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\EventPriority;
 use pocketmine\event\Listener;
-use pocketmine\player\Player;
+use pocketmine\Player;
 use pocketmine\utils\TextFormat;
 
 class AcrobaticsListener implements Listener{
