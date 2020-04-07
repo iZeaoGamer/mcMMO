@@ -8,7 +8,7 @@ use cosmicpe\mcmmo\player\McMMOPlayer;
 use cosmicpe\mcmmo\skill\SkillManager;
 use cosmicpe\mcmmo\skill\subskill\SubSkillManager;
 use pocketmine\item\Item;
-use pocketmine\player\Player;
+use pocketmine\Player;
 
 abstract class BuffableAbility implements Ability{
 
