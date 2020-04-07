@@ -29,7 +29,7 @@ final class McMMO extends PluginBase{
 	/** @var PlayerManager */
 	private $player_manager;
 
-	protected function onEnable() : void{
+	public function onEnable() : void{
 		self::$instance = $this;
 
 		$this->parseExperienceFormula();
@@ -57,7 +57,7 @@ final class McMMO extends PluginBase{
 		return $this->player_manager;
 	}
 
-	protected function onDisable() : void{
+	public function onDisable() : void{
 		$this->database->close();
 	}
 }
